@@ -98,13 +98,6 @@ def zero_matrix(n, m) -> list:
         B.append(A)
     return B
 
-def geometric_sum0(A, n) -> list:
-    Z = zero_matrix(len(A), len(A))
-    for i in range(n + 1):
-        Y = matrix_power(A, i)
-        Z = matrix_addition(Z, Y)
-    return Z
-
 def geometric_sum(A, n) -> list:
     Z = zero_matrix(len(A), len(A))
     Y = identity_matrix(len(A))
